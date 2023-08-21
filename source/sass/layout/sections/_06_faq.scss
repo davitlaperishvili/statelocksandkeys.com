@@ -1,0 +1,80 @@
+section.faq{
+    margin-bottom: 150px;
+    @media(max-width: 1024px){
+        margin-bottom: 50px;
+    }
+    .container{
+        display: grid;
+        grid-gap: 90px;
+        grid-template-columns: 1fr 1fr;
+        @media(max-width: 1024px){
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
+        .faq_left{
+            .section_title{
+                margin-bottom: 20px;
+            }
+            .faq_list{
+                .faq_item{
+                    margin-bottom: 14px;
+                    padding: 14px 14px 14px 80px;
+                    background-color: rgba(#E6E1DF, 0.25);
+                    border-radius: 5px;
+                    @media(max-width: 1024px){
+                        padding: 14px 14px 14px 50px;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    img{
+                        position: absolute;
+                        top: 14px;
+                        left: 23px;
+                        @media(max-width: 1024px){
+                            left: 13px;
+                        }
+                    }
+                    .faq_title{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        font-size: 18px;
+                        @media(max-width: 1024px){
+                            font-size: 16px;
+                        }
+                        &:after{
+                            content: "\ea4e";
+                            font-family: $ffremix;
+                            font-weight: 400;
+                            transition: 0.4s;
+                            color: #563636;
+                            font-size: 25px;
+                            line-height: 18px;
+                        }
+                        &.is-active{
+                            &:after{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .faq_content{
+                        display: none;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+        figure{
+            img{
+                @media(max-width: 1024px){
+                    width: 100%;
+                    max-height: 300px;
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+}

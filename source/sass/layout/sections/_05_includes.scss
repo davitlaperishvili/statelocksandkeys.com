@@ -1,0 +1,135 @@
+section.include{
+    margin-bottom: 183px;
+    padding: 70px 0 160px;
+    background-color: rgba(#F1CDC5, 0.09);
+    .container{
+        position: static;
+        .block_title{
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .include_list{
+            display: grid;
+            grid-gap: 30px 100px;
+            grid-template-columns: repeat(3, 1fr);
+            padding-left: 42px;
+            @media(max-width: 1024px){
+                grid-gap: 20px;
+                padding-left: 20px;
+                grid-template-columns: 1fr;
+            }
+            .include_item{
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 3px 10px rgba(#1E2C5C, 0.16);
+                    height: 94px;
+                    width: 100%;
+                    background-color: $cwhite;
+                    @media(max-width: 1024px){
+                        height: 70px;
+                    }
+                    span.icon{
+                        position: absolute;
+                        left: 0;
+                        transform: translateX(-50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 83px;
+                        height: 83px;
+                        border-radius: 50%;
+                        border: 4px solid #003E84;
+                        background-color: $cwhite;
+                        @media(max-width: 1024px){
+                            width: 50px;
+                            height: 50px;
+                        }
+                        img{
+                            max-height: 35px;
+                            @media(max-width: 1024px){
+                                max-height: 25px;
+                            }
+                        }
+                    }
+                    span.title{
+                        color: #0E326A;
+                        font-size: 24px;
+                        font-weight: 500;
+                        @media(max-width: 1024px){
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .section_buttons{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transform: translateY(50%);
+            @media(max-width: 1024px){
+                flex-direction: column;
+                align-items: center;
+            }
+            .include_button{
+                &:first-child{
+                    margin-right: 47px;
+                    @media(max-width: 1024px){
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 386px;
+                    height: 100px;
+                    background-color: $ccorp;
+                    border-radius: 5px;
+                    color: $cwhite;
+                    @media(max-width: 1024px){
+                        width: 320px;
+                        height: 70px;
+                    }
+                    img{
+                        margin-right: 30px;
+                        @media(max-width: 1024px){
+                            margin-right: 15px;
+                        }
+                    }
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 14px;
+                        @media(max-width: 1024px){
+                            font-size: 13px;
+                        }
+                        span.big{
+                            font-size: 24px;
+                            @media(max-width: 1024px){
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+                &.blue{
+                    a{
+                        background-color: #1A2A58;
+                        span{
+                            span.big{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
